@@ -1,0 +1,74 @@
+:root {
+    --body-color: #ebebeb;
+    --sidebar-color: #fff;
+    --sidebar-item-color: #000000;
+} .dark-mode {
+    --body-color: #252222;
+    --sidebar-color: rgb(58, 57, 57)222;
+    --sidebar-item-color: #ebebeb;
+}
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    background-color: var(--sidebar-color);
+    box-shadow: 20px 0px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    position: relative
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--body-color);
+    font-size:16px;
+    height: 100vh;
+} .logo {
+    width: 64px;
+    height: 64px;
+    margin: 20px;
+    position: relative;
+} .sidebar-item  a{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+    color: #000000;
+    top: 25%;
+    padding: 10px;
+    left: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    list-style: none;
+    margin: 10px;
+    
+} .sidebar-item {
+    list-style: none;
+} .sidebar::after , .sidebar::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 10%, rgb(0, 0, 0));
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 0.5s spin linear infinite;
+}
+.sidebar::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }@keyframes spin {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
