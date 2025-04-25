@@ -8,16 +8,26 @@ const toggle = document.querySelector(".toggle");
 const modeSwitch = document.querySelector(".toggle-switch");
 // Texte affiché à côté du switch (Mode Sombre/Light)
 const modeText = document.querySelector(".mode-text");
+// Logo
+
+// Applique le dark mode si activé dans le localStorage
+if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark-mode");
+    modeText.innerText = "Light mode";
+} else {
+    body.classList.remove("dark-mode");
+    modeText.innerText = "Dark mode";
+}
 
 // Gestion du clic sur le switch pour activer/désactiver le dark mode
 modeSwitch.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
     if (body.classList.contains("dark-mode")) {
         modeText.innerText = "Light mode";
-        localStorage.setItem("darkMode", "enabled");
+        localStorage.setItem("dark-mode", "enabled");
     } else {
         modeText.innerText = "Dark mode";
-        localStorage.setItem("darkMode", "disabled");
+        localStorage.setItem("dark-mode", "disabled");
     }
 });
 

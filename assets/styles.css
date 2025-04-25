@@ -2593,3 +2593,12 @@ body.dark-mode .menu-bar .mode i.sun {
     margin-bottom: 3px;
   }
 }
+
+.logo {
+  cursor:pointer;
+  transition: var(--tran-02);
+}
+
+.logo:hover {
+  scale: 1.1;
+}
