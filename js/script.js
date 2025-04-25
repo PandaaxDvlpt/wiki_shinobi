@@ -24,6 +24,12 @@ modeSwitch.addEventListener("click", () => {
 // Gestion du clic sur le bouton pour ouvrir/fermer la sidebar
 
 toggle.addEventListener("click", () => {
-
-    sidebar.classList.toggle("close");
- });
+    if (window.innerWidth <= 600) {
+        sidebar.classList.toggle("open");
+        // En mobile, on enlève la classe 'close' pour éviter les conflits
+        sidebar.classList.remove("close");
+    } else {
+        sidebar.classList.toggle("close");
+        sidebar.classList.remove("open");
+    }
+});
