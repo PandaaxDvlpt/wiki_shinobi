@@ -3,21 +3,22 @@
     --body-color: #ebebeb;
     --sidebar-color: #fff;
     --text-color: #000000;
-    --text-hover-color: rgba(65, 65, 65, 0.76);
-    --toggle-color: #000000bb;
+    --text-hover-color: #8d8d8d;
+    --toggle-color: #2e2e2ebb;
     --primary-color: #00000094;
 
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
-    --tran-03: all 0.4s ease;
-    --tran-03: all 0.5s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
 
 } .dark-mode {
-    --body-color: #333333;
-    --sidebar-color: #1a1a1a;
-    --text-color: #ffffffef;
-    --text-hover-color: rgba(255, 255, 255, 0.719);
-    --toggle-color: #ffffffd2;
+    --body-color: #1f1f1f;
+    --sidebar-color: #3a3a3a;
+    --text-color: #d3d3d3;
+    --text-hover-color: #555555;
+    --toggle-color: #f0f0f0;
+    --primary-color: #b4b0b094;
 }
 * {
     margin: 0;
@@ -29,6 +30,7 @@
 body {
     height: 100vh;
     background: var(--body-color);
+    transition: var(--tran-02);
 }
 .sidebar {
     position: fixed;
@@ -38,6 +40,7 @@ body {
     width: 250px;
     background: var(--sidebar-color);
     padding: 10px 14px;
+    transition: var(--tran-05)
 }
 
 .sidebar .image-text img {
@@ -54,6 +57,8 @@ body {
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
+    transition: var(--tran-04);
+    white-space: nowrap;
 }
 
 .sidebar .image {
@@ -77,7 +82,7 @@ body {
 .sidebar header .toggle {
     position: absolute;
     top: 50%;
-    right: -12%;
+    left: 100%;
     transform: translateY(-50%);
     height: 25px;
     width: 25px;
@@ -88,8 +93,141 @@ body {
     border-radius: 50%;
     color: var(--sidebar-color);
     font-size: 22px;
+    cursor: pointer;
 } 
 
 .sidebar header {
     position: relative
+}
+
+.sidebar li {
+    height: 50px;
+    list-style: none;
+    margin-top: 20px;
+    display:flex;
+    align-items: center;
+} .sidebar li .icon{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+.sidebar li .icon, .sidebar li .text {
+    color: var(--text-color);
+    transition: var(--tran-04)
+}
+.sidebar li a {
+    text-decoration: none;
+    color: var(--text-color);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: var(--tran-04)
+
+}  .sidebar li a:hover {
+    background: var(--text-hover-color)
+}  
+.sidebar li a:hover .icon, .sidebar li a:hover .text {
+    color: var(--sidebar-color);
+} .sidebar .menu-bar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} .sidebar .bottom-content {
+    margin-top: auto;
+    padding-bottom: 75px;
+}
+
+.menu-bar .mode {
+    position: relative;
+    background: var(--body-color);
+    border-radius: 6px;
+} .menu-bar .mode .moon-sun {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+
+} .menu-bar .mode i {
+    position: absolute;
+    transition: var(--tran-03)
+}  .menu-bar .mode i.sun {
+    opacity: 0;
+} .menu-bar .mode .toggle-switch {
+    position: absolute;
+    right: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;;
+    height: 100%;
+    min-width: 60px;
+    position: absolute;
+} .toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    background: var(--toggle-color);
+    transition: var(--tran-03);
+    cursor: pointer;
+
+}
+.switch::before {
+    height: 15px;
+    width: 15px;
+    background: var(--sidebar-color);
+    content: '';
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: var(--tran-03);
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
+body.dark-mode .switch::before {
+    left: 25px;
+}
+
+.sidebar.close {
+    width: 88px;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+body.dark-mode .menu-bar .mode i.sun {
+    opacity: 1;
+ 
+} body.dark-mode .menu-bar .mode i.moon {
+    opacity: 0;
+   
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} .bvn-text {
+    color: var(--text-color);
+    top: 40%;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    transition: var(--tran-05);
+} .p-text {
+    color: var(--text-color);
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: var(--tran-05);
 }
