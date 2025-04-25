@@ -1,4 +1,7 @@
+/* =================== IMPORT FONTS =================== */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* =================== VARIABLES CSS =================== */
 :root {
     --body-color: #ebebeb;
     --sidebar-color: #fff;
@@ -20,6 +23,7 @@
     --toggle-color: #f0f0f0;
     --primary-color: #b4b0b094;
 }
+/* ========== RESET CSS ET FONTS ========== */
 * {
     margin: 0;
     padding: 0;
@@ -27,11 +31,13 @@
     font-family: 'Rubik', sans-serif;
 }
 
+/* ========== BODY PRINCIPAL ========== */
 body {
     height: 100vh;
     background: var(--body-color);
     transition: var(--tran-02);
 }
+/* ========== SIDEBAR LAYOUT ========== */
 .sidebar {
     position: fixed;
     top:0;  
@@ -43,6 +49,7 @@ body {
     transition: var(--tran-05)
 }
 
+/* ========== LOGO SIDEBAR ========== */
 .sidebar .image-text img {
     width: 50px;
     border-radius: 6px;
@@ -53,6 +60,7 @@ body {
     gap: 10px;
 }
 
+/* ========== TEXTES SIDEBAR ========== */
 .sidebar .text {
     font-size: 16px;
     font-weight: 500;
@@ -61,6 +69,7 @@ body {
     white-space: nowrap;
 }
 
+/* ========== IMAGE CONTAINER SIDEBAR ========== */
 .sidebar .image {
     min-width: 60px;
     display: flex;
@@ -79,6 +88,7 @@ body {
 }
 
 
+/* ========== BOUTON TOGGLE SIDEBAR ========== */
 .sidebar header .toggle {
     position: absolute;
     top: 50%;
@@ -96,10 +106,12 @@ body {
     cursor: pointer;
 } 
 
+/* ========== HEADER SIDEBAR ========== */
 .sidebar header {
     position: relative
 }
 
+/* ========== LIENS DU MENU SIDEBAR ========== */
 .sidebar li {
     height: 50px;
     list-style: none;
@@ -113,10 +125,12 @@ body {
     min-width: 60px;
     font-size: 20px;
 }
+/* ========== ICONES ET TEXTES DES LIENS ========== */
 .sidebar li .icon, .sidebar li .text {
     color: var(--text-color);
     transition: var(--tran-04)
 }
+/* ========== STYLE DES LIENS ========== */
 .sidebar li a {
     text-decoration: none;
     color: var(--text-color);
@@ -132,16 +146,19 @@ body {
 }  
 .sidebar li a:hover .icon, .sidebar li a:hover .text {
     color: var(--sidebar-color);
-} .sidebar .menu-bar {
+} /* ========== CONTENEUR MENU BAR (flex) ========== */
+.sidebar .menu-bar {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-} .sidebar .bottom-content {
+} /* ========== CONTENU BAS DE SIDEBAR ========== */
+.sidebar .bottom-content {
     margin-top: auto;
     padding-bottom: 75px;
 }
 
+/* ========== SWITCH MODE SOMBRE/CLAIR ========== */
 .menu-bar .mode {
     position: relative;
     background: var(--body-color);
@@ -166,7 +183,8 @@ body {
     height: 100%;
     min-width: 60px;
     position: absolute;
-} .toggle-switch .switch {
+} /* ========== SWITCH BOUTON (rond) ========== */
+.toggle-switch .switch {
     position: relative;
     height: 22px;
     width: 44px;
@@ -190,10 +208,12 @@ body {
     cursor: pointer;
 } 
 
+/* ========== POSITION SWITCH SI DARK MODE ========== */
 body.dark-mode .switch::before {
     left: 25px;
 }
 
+/* ========== SIDEBAR FERMÉE ========== */
 .sidebar.close {
     width: 88px;
 }
@@ -217,6 +237,8 @@ body.dark-mode .menu-bar .mode i.sun {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: var(--tran-05);
+    background: var(--body-color)
 } .bvn-text {
     color: var(--text-color);
     top: 40%;
@@ -230,4 +252,9 @@ body.dark-mode .menu-bar .mode i.sun {
     font-size: 16px;
     font-weight: 500;
     transition: var(--tran-05);
+}
+
+.sidebar.close ~ .home {
+    left: 88px;
+    width: calc(100% - 88px);
 }

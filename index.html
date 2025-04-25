@@ -3,18 +3,23 @@
 
 <!-- ======================= HEAD ======================= -->
 <head>
+    <!-- Métadonnées principales de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Feuille de style principale -->
     <link rel="stylesheet" href="./assets/styles.css">
+    <!-- Icônes Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <!-- ======================= BODY ======================= -->
 <body>
     <!-- ===== SIDEBAR NAVIGATION ===== -->
+    <!-- Barre latérale contenant le logo, le titre et le menu de navigation -->
     <nav class="sidebar close">
         <header>
+            <!-- Logo et textes principaux -->
             <div class="image-text">
                 <span class="image">
                     <img src="./assets/img/logo.jpg" alt="logo">
@@ -24,69 +29,75 @@
                     <span class="wiki">WIKI</span>
                 </div>
             </div>
+            <!-- Bouton pour ouvrir/fermer la sidebar -->
             <i class='bx bx-chevron-right toggle'></i>
         </header>
         <div class="menu-bar">
+            <!-- Liens principaux du menu (haut) -->
             <div class="top-content">
-                    <ul class="menu-links">
-                        <li class="navlinks">
-                            <a href="#">
-                                <i class='bx bxs-plane-alt icon'></i>    
-                                <span class="text nav-text">Règlement Légal</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="menu-links">
-                        <li class="navlinks">
-                            <a href="#">
-                                <i class='bx bx-phone icon'></i>   
-                                <span class="text nav-text">Règlement Illégal</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="menu-links">
-                        <li class="navlinks">
-                            <a href="#">
-                                <i class='bx bx-shield-minus icon'></i>
-                                <span class="text nav-text">Code Pénal</span>
-                            </a>
-                        </li>
-                    </ul>
-            </div>
-            <div class="bottom-content">
+                <!-- Lien vers le règlement légal -->
+                <ul class="menu-links">
                     <li class="navlinks">
                         <a href="#">
-                            <i class='bx bx-log-out icon'></i>
-                            <span class="text nav-text">Se Connecter ( WIP )</span>
+                            <i class='bx bxs-plane-alt icon'></i>    
+                            <span class="text nav-text">Règlement Légal</span>
                         </a>
                     </li>
-                    <li class="mode">
-                        <div class="moon-sun">
-                            <i class='bx bx-moon icon moon'></i>
-                            <i class='bx bx-sun icon sun'></i>
-                        </div>
-                        <span class="mode-text text">Mode Sombre</span>
-                        <div class="toggle-switch">
-                            <span class="switch"></span>
-                        </div>
+                </ul>
+                <!-- Lien vers le règlement illégal -->
+                <ul class="menu-links">
+                    <li class="navlinks">
+                        <a href="#">
+                            <i class='bx bx-phone icon'></i>   
+                            <span class="text nav-text">Règlement Illégal</span>
+                        </a>
                     </li>
+                </ul>
+                <!-- Lien vers le code pénal -->
+                <ul class="menu-links">
+                    <li class="navlinks">
+                        <a href="#">
+                            <i class='bx bx-shield-minus icon'></i>
+                            <span class="text nav-text">Code Pénal</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Boutons du bas (connexion et mode sombre) -->
+            <div class="bottom-content">
+                <!-- Bouton de connexion (WIP) -->
+                <li class="navlinks">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Se Connecter ( WIP )</span>
+                    </a>
+                </li>
+                <!-- Switch mode sombre/clair -->
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Mode Sombre</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
             </div>
         </div>
     </nav>
 
-
-
-
     <!-- ===== MAIN ===== -->
-
-     <section class="home">
+    <!-- Section principale d'accueil avec présentation -->
+    <section class="home">
         <h1 class="bvn-text">Bienvenue sur le Wiki de ShinobiRP</h1>
         <p class="p-text">Ici vous trouverez toutes les informations nécessaires pour bien débuter sur le serveur.</p>
         <p class="p-text">N'hésitez pas à consulter le règlement légal et illégal ainsi que le code pénal.</p>
         <p class="p-text">Si vous avez des questions, n'hésitez pas à contacter un membre de l'équipe.</p>
         <p class="p-text">Nous vous souhaitons un bon jeu sur ShinobiRP !</p>
-     </section>
-     
+    </section>
+    
+    <!-- Script principal de la page -->
     <script src="./js/script.js"></script>
 </body>
 

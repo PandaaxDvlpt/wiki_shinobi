@@ -1,9 +1,15 @@
+// Sélectionne le body principal du document
 const body = document.querySelector("body");
+// Sélectionne la sidebar
 const sidebar = document.querySelector(".sidebar");
+// Bouton pour ouvrir/fermer la sidebar
 const toggle = document.querySelector(".toggle");
+// Switch du mode sombre/clair
 const modeSwitch = document.querySelector(".toggle-switch");
+// Texte affiché à côté du switch (Mode Sombre/Light)
 const modeText = document.querySelector(".mode-text");
 
+// Gestion du clic sur le switch pour activer/désactiver le dark mode
 modeSwitch.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
     if (body.classList.contains("dark-mode")) {
@@ -14,6 +20,8 @@ modeSwitch.addEventListener("click", () => {
         localStorage.setItem("darkMode", "disabled");
     }
 });
+
+// Gestion du clic sur le bouton pour ouvrir/fermer la sidebar
 
 toggle.addEventListener("click", () => {
 
