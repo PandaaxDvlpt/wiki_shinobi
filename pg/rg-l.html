@@ -19,6 +19,7 @@
 
 <!-- ======================= BODY ======================= -->
 <body>
+<main>
     <!-- ===== SIDEBAR NAVIGATION ===== -->
     <!-- Barre latérale contenant le logo, le titre et le menu de navigation -->
     <nav class="sidebar close">
@@ -93,26 +94,20 @@
 
     <!-- ===== MAIN ===== -->
     <!-- Section principale d'accueil avec présentation -->
-    <section class="home">
-        <h1 class="bvn-text">Bienvenue sur le Wiki de ShinobiRP</h1>
-        <p class="p-text">Ici vous trouverez toutes les informations nécessaires pour bien débuter sur le serveur.</p>
-        <p class="p-text">N'hésitez pas à consulter le règlement légal et illégal ainsi que le code pénal.</p>
-        <p class="p-text">Si vous avez des questions, n'hésitez pas à contacter un membre de l'équipe.</p>
-        <p class="p-text">Nous vous souhaitons un bon jeu sur ShinobiRP !</p>
+    <section class="container-home">
+        <h2 class="text-h2">📜 Règles de Rôleplay</h2>
+        <div class="json-text"></div>
     </section>
-    
-    <!-- Script principal de la page -->
+</main>  <!-- Script principal de la page -->
     <script src="../js/script.js"></script>
     <script>
         const logo = document.querySelector(".logo");
-
-
         logo.addEventListener("click", () => {
          window.location.href = "../index.html";
         });
     </script>
 </body>
 
+<style>
+</style>
 </html>
-
-

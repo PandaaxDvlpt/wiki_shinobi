@@ -43,3 +43,50 @@ toggle.addEventListener("click", () => {
         sidebar.classList.remove("open");
     }
 });
+
+// Gestion du Fihcier JSON
+
+async function chargerJson() {
+    const container = document.querySelector(".json-text");
+
+    try {
+        const result = await fetch("../assets/rg-l.json");
+        const data = await result.json();
+
+        const regles = data.regles_roleplay;
+        let html = "";
+
+        for (const [titre, contenu] of Object.entries(regles)) {
+            html += `<h2>${titre.replace(/_/g, ' ').toUpperCase()}</h2>`;
+
+            if (Array.isArray(contenu)) {
+                html += "<ul>";
+                contenu.forEach(item => {
+                    html += `<li>${item}</li>`;
+                });
+                html += "</ul>";
+            } else if (typeof contenu === "object") {
+                for (const [sousTitre, sousContenu] of Object.entries(contenu)) {
+                    html += `<h3>${sousTitre.replace(/_/g, ' ').toUpperCase()}</h3>`;
+                    if (Array.isArray(sousContenu)) {
+                        html += "<ul>";
+                        sousContenu.forEach(item => {
+                            html += `<li>${item}</li>`;
+                        });
+                        html += "</ul>";
+                    } else {
+                        html += `<p>${sousContenu}</p>`;
+                    }
+                }
+            } else {
+                html += `<p>${contenu}</p>`;
+            }
+        }
+
+        container.innerHTML = html;
+    } catch (error) {
+        console.error("Erreur de chargement du JSON :", error);
+    }
+}
+
+chargerJson();
