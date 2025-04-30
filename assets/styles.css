@@ -38,7 +38,7 @@
 body {
   height: 100vh;
   background: var(--body-color);
-  transition: var(--tran-02);
+  transition: var(--tran-05);
 }
 
 /* ========== SIDEBAR LAYOUT ========== */
@@ -110,6 +110,14 @@ header .image-text .header-text {
   color: var(--sidebar-color);
   font-size: 22px;
   cursor: pointer;
+} 
+.sidebar .toggle:hover {
+  scale: 1.1;
+  transition: var(--tran-02)
+} 
+.sidebar .toggle:active {
+  scale: 0.9;
+  transition: var(--tran-02)
 }
 
 /* ========== HEADER SIDEBAR ========== */
@@ -214,7 +222,7 @@ body.dark-mode .menu-bar .mode i.moon {
   width: 44px;
   border-radius: 25px;
   background: var(--toggle-color);
-  transition: var(--tran-03);
+  transition: var(--tran-05);
   cursor: pointer;
 }
 
@@ -226,7 +234,7 @@ body.dark-mode .menu-bar .mode i.moon {
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
-  transition: var(--tran-03);
+  transition: var(--tran-05);
   position: absolute;
   border-radius: 50%;
   cursor: pointer;

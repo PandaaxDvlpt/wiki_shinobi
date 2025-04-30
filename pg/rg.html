@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,18 +7,19 @@
     <!-- Métadonnées principales de la page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShinobiRP Wiki | Serveur GTA RP Francophone</title>
+    <title>ShinobiRP Wiki | Règlement</title>
     <meta name="keywords" content="GTA RP ShinobiRP, Wiki ShinobiRP, Serveur GTA RP, Guide ShinobiRP, Règlement ShinobiRP, Métier RP GTA, Serveur RP francophone, Roleplay GTA V, ShinobiRP scripts, ShinobiRP économie">
     <meta name="description" content="Découvrez le wiki officiel de ShinobiRP, un serveur GTA RP francophone. Retrouvez toutes les infos sur les métiers, factions, règles, personnages, scripts, et l'économie du serveur pour une expérience RP complète.">
     <meta name="author" content="IZUKA_">
     <!-- Feuille de style principale -->
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="../assets/styles.css">
     <!-- Icônes Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <!-- ======================= BODY ======================= -->
 <body>
+<main>
     <!-- ===== SIDEBAR NAVIGATION ===== -->
     <!-- Barre latérale contenant le logo, le titre et le menu de navigation -->
     <nav class="sidebar close">
@@ -25,7 +27,7 @@
             <!-- Logo et textes principaux -->
             <div class="image-text">
                 <span class="image">
-                    <img src="./assets/img/logo.jpg" class="logo" alt="logo" style="cursor: pointer;">
+                    <img src="../assets/img/logo.jpg" class="logo" alt="logo">
                 </span>
                 <div class="text header-text">
                     <span class="name">ShinobiRP</span>
@@ -41,9 +43,9 @@
                 <!-- Lien vers le règlement légal -->
                 <ul class="menu-links">
                     <li class="navlinks">
-                        <a href="./pg/rg.html">
+                        <a href="#">
                             <i class='bx bxs-plane-alt icon'></i>    
-                            <span class="text nav-text">Règlement</span>
+                            <span class="text nav-text">Règlement Légal</span>
                         </a>
                     </li>
                 </ul>
@@ -52,7 +54,7 @@
                     <li class="navlinks">
                         <a href="#">
                             <i class='bx bx-phone icon'></i>   
-                            <span class="text nav-text">Règlement Légal</span>
+                            <span class="text nav-text">Règlement Illégal</span>
                         </a>
                     </li>
                 </ul>
@@ -61,23 +63,7 @@
                     <li class="navlinks">
                         <a href="#">
                             <i class='bx bx-shield-minus icon'></i>
-                            <span class="text nav-text">Réglement Illégal</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="menu-links">
-                    <li class="navlinks">
-                        <a href="#">
-                            <i class='bx bxl-sketch icon'></i>
                             <span class="text nav-text">Code Pénal</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="menu-links">
-                    <li class="navlinks">
-                        <a href="#">
-                            <i class='bx bx-conversation icon'></i>
-                            <span class="text nav-text">Commandes utiles</span>
                         </a>
                     </li>
                 </ul>
@@ -86,7 +72,7 @@
             <div class="bottom-content">
                 <!-- Bouton de connexion (WIP) -->
                 <li class="navlinks">
-                    <a href="./pg/login.html">
+                    <a href="login.html">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Se Connecter ( WIP )</span>
                     </a>
@@ -108,18 +94,21 @@
 
     <!-- ===== MAIN ===== -->
     <!-- Section principale d'accueil avec présentation -->
-    <section class="home">
-        <h1 class="bvn-text">Bienvenue sur le Wiki de ShinobiRP</h1>
-        <p class="p-text">Ici vous trouverez toutes les informations nécessaires pour bien débuter sur le serveur.</p>
-        <p class="p-text">N'hésitez pas à consulter le règlement légal et illégal ainsi que le code pénal.</p>
-        <p class="p-text">Si vous avez des questions, n'hésitez pas à contacter un membre de l'équipe.</p>
-        <p class="p-text">Nous vous souhaitons un bon jeu sur ShinobiRP !</p>
+    <section class="container-home">
+        <h2 class="text-h2">📜 Règles de Rôleplay</h2>
+        <div class="json-text"></div>
     </section>
-    
-    <!-- Script principal de la page -->
-    <script src="./js/script.js"></script>
+</main>  <!-- Script principal de la page -->
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const logo = document.querySelector(".logo");
+        logo.addEventListener("click", () => {
+         window.location.href = "../index.html";
+        });
+    </script>
 </body>
 
+<style>
+</style>
 </html>
-
-
