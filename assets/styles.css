@@ -50,13 +50,15 @@ body {
   width: 250px;
   background: var(--sidebar-color);
   padding: 10px 14px;
-  transition: var(--tran-05)
+  transition: var(--tran-05);
+  z-index: 2;
 }
 
 /* ========== LOGO SIDEBAR ========== */
 .sidebar .image-text img {
   width: 50px;
   border-radius: 6px;
+  z-index: 2;
 }
 
 .sidebar header .image-text {
@@ -525,4 +527,36 @@ body.dark-mode .switch::before {
   transition: var(--tran-05);
   list-style: none;
   text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--sidebar-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  z-index: 1;
+} 
+.footer .footer-p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: var(--tran-05);
+} .footer .footer-p a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--tran-05);
+} .footer .footer-p a:hover {
+  color: var(--text-hover-color);
+} .footer .footer-p a:active {
+  color: var(--text-color);
+} .footer .footer-p a:visited {
+  color: var(--text-color);
 }
