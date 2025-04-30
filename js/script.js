@@ -50,7 +50,7 @@ async function chargerJson() {
     const container = document.querySelector(".json-text");
 
     try {
-        const result = await fetch("../assets/rg-l.json");
+        const result = await fetch("../assets/rg.json");
         const data = await result.json();
 
         const regles = data.regles_roleplay;
@@ -62,7 +62,7 @@ async function chargerJson() {
             if (Array.isArray(contenu)) {
                 html += "<ul>";
                 contenu.forEach(item => {
-                    html += `<li>${item}</li>`;
+                    html += `<li>${marked.parse(item)}</li>`; // rendu Markdown
                 });
                 html += "</ul>";
             } else if (typeof contenu === "object") {
@@ -71,15 +71,15 @@ async function chargerJson() {
                     if (Array.isArray(sousContenu)) {
                         html += "<ul>";
                         sousContenu.forEach(item => {
-                            html += `<li>${item}</li>`;
+                            html += `<li>${marked.parse(item)}</li>`; // rendu Markdown
                         });
                         html += "</ul>";
                     } else {
-                        html += `<p>${sousContenu}</p>`;
+                        html += `<p>${marked.parse(sousContenu)}</p>`; // rendu Markdown
                     }
                 }
             } else {
-                html += `<p>${contenu}</p>`;
+                html += `<p>${marked.parse(contenu)}</p>`; // rendu Markdown
             }
         }
 

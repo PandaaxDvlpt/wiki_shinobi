@@ -1,0 +1,60 @@
+{
+  "regles_roleplay": {
+    "🎭 L’incarnation du personnage (Roleplay fondamental)": [
+      "Vous devez toujours agir comme si votre personnage vivait réellement dans l’univers du serveur.",
+      "Votre personnage a des émotions, des limites, des objectifs. Il n'est pas une extension de vous-même IRL.",
+      "Les décisions prises doivent être cohérentes avec son vécu, ses relations et sa situation actuelle."
+    ],
+    "💬 Communication RP": [
+      "Le langage utilisé doit rester crédible et immersif : évitez les expressions trop modernes ou hors-univers.",
+      "Les discussions vocales ou textuelles doivent être strictement In-Character (IC).",
+      "<u>L’usage</u> du /me est obligatoire pour les actions précises ou <u>ambiguës</u>, notamment lors d'interactions **physiques**, **fouilles**, **blessures**, **etc.**"
+    ],
+    "💥 Powergaming (Interdit)": [
+        "Vous oubliez les 15 dernières minutes avant votre mort.",
+        "Interdiction de revenir sur les lieux avant 30 minutes.",
+        "Mort Définitive : Possible en cas exceptionnel avec validation staff."
+      ],
+    "🧠 Métagaming (Interdit)": [
+      "Il est formellement interdit d’utiliser des informations obtenues hors RP (Discord, Twitch, carte du serveur, etc.) dans votre RP.",
+      "Par exemple : connaître le nom d’un joueur sans qu’il se soit présenté, ou préparer une attaque car vous avez vu un live."
+    ],
+    "😱 Fear RP": [
+      "Vous devez avoir peur pour votre vie dans les situations critiques (menaces, armes pointées, etc.).",
+      "Si votre personnage est seul, désarmé, encerclé ou menacé, il doit agir en conséquence (pas d'héroïsme gratuit)."
+    ],
+    "💀 New Life Rule (NLR)": [
+      "Si votre personnage meurt dans une scène RP, il oublie les 15 dernières minutes avant sa mort.",
+      "Il est interdit de :",
+      "• Revenir sur les lieux de sa mort avant 30 minutes.",
+      "• Se venger ou reprendre directement une action en lien avec l’événement."
+    ],
+    "🔗 Interactions complexes (fouille, otages, braquages…)": [
+      "Toute action doit être jouée avec réalisme, cohérence et équilibre RP.",
+      "Lors d’un braquage, fouille ou enlèvement :",
+      "• Utilisez toujours /me et /do.",
+      "• Laissez une marge de réponse au joueur ciblé.",
+      "• Ne cherchez pas le “gros lot”, cherchez le jeu RP."
+    ],
+    "🗣 Fuite, poursuite et arrestation": [
+      "Les poursuites doivent rester cohérentes : ne prenez pas de virages irréalistes ou d’itinéraires impossibles.",
+      "En cas d’arrestation :",
+      "• Restez RP même si vous êtes perdant dans la scène.",
+      "• Les dialogues avec la police, la mafia ou d'autres groupes doivent refléter le caractère de votre personnage."
+    ],
+    "🧑‍🤝‍🧑 Développement du personnage": [
+    "Votre personnage peut évoluer (changer d’objectifs, de camps, etc.), mais toujours avec logique.",
+    "Les décisions majeures (trahison, changement de camp, suicide RP...) doivent être préparées et justifiables dans le jeu."
+    ],
+    "📚 L’univers du serveur": [
+      "Adaptez toujours votre RP à l’ambiance et aux règles de l’univers proposé par le serveur.",
+      "Ex : serveur réaliste, serveur semi-futuriste, serveur communautaire, etc.",
+      "Créez un personnage qui a une place crédible dans la société du serveur (pas d’incohérences style \"dealer milliardaire en 3 jours\")."
+    ],
+    "🎯 En résumé" : [
+      "Restez cohérent, équilibré et dans le jeu.",
+      "Ne cherchez pas à \"gagner\", cherchez à jouer une histoire.",
+      "Respectez toujours l’expérience des autres joueurs."
+    ]
+  }
+}
