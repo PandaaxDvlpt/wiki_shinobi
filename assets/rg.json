@@ -1,6 +1,6 @@
 {
   "regles_roleplay": {
-    "🎭 L’incarnation du personnage (Roleplay fondamental)": [
+    "🎭 L’incarnation du personnage": [
       "Vous devez toujours agir comme si votre personnage vivait réellement dans l’univers du serveur.",
       "Votre personnage a des émotions, des limites, des objectifs. Il n'est pas une extension de vous-même IRL.",
       "Les décisions prises doivent être cohérentes avec son vécu, ses relations et sa situation actuelle."
@@ -29,7 +29,7 @@
       "• Revenir sur les lieux de sa mort avant 30 minutes.",
       "• Se venger ou reprendre directement une action en lien avec l’événement."
     ],
-    "🔗 Interactions complexes (fouille, otages, braquages…)": [
+    "🔗 Interactions complexes": [
       "Toute action doit être jouée avec réalisme, cohérence et équilibre RP.",
       "Lors d’un braquage, fouille ou enlèvement :",
       "• Utilisez toujours /me et /do.",
